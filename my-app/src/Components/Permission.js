@@ -22,7 +22,7 @@ export default function Permission() {
 					aria-labelledby="demo-row-radio-buttons-group-label"
 					name="row-radio-buttons-group"
 				>
-					<Link to="/manage-todo">
+					<Link to="/manage-to-do">
 						<Mui.FormControlLabel
 							value="female"
 							control={<Mui.Radio />}

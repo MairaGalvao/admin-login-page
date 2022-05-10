@@ -1,4 +1,4 @@
-function SignUp() {
+function SignUp(email, password) {
 	fetch("http://localhost:8080/user", {
 		method: "POST",
 		headers: {
@@ -6,8 +6,8 @@ function SignUp() {
 			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
-			email: "mairaga@",
-			password: "1234",
+			email: email,
+			password: password,
 		}),
 	})
 		.then((res) => res.json())
@@ -15,6 +15,7 @@ function SignUp() {
 			console.log(data.to_do);
 			console.log(data.contacts);
 			console.log(data.pros_cons);
+			console.log(email);
 		});
 
 	return (

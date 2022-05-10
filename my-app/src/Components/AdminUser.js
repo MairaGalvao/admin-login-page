@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AdminUser() {
+function AdminUser(email, password) {
 	//TODO THATS THE ADMIN USER (2)
 	const [todo_permission, setTodo_permission] = useState(false);
 	const [contacts_permission, setContacts_permission] = useState(false);
@@ -10,7 +10,7 @@ function AdminUser() {
 		method: "GET",
 		headers: {
 			Accept: "application/json",
-			body: "mairagalvao01@gmail.com",
+			body: { email: email, password: password },
 		},
 	})
 		.then((data) => {
@@ -23,7 +23,7 @@ function AdminUser() {
 	const requestOptions = {
 		method: "PUT",
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({ email: "sidneyfie@gmail.com" }),
+		body: JSON.stringify({ email: email, password: password }),
 	};
 	fetch("http://localhost:8080/user", requestOptions)
 		.then((response) => response.json())

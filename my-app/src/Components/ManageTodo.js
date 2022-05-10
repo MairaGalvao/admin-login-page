@@ -10,15 +10,15 @@ const ManageTodo = () => {
 	// navigate("/user-admin");
 	const [isUserIn, setIsUserIn] = useState(false);
 	const [task, setTask] = useState();
-	const [value, setValue] = useState();
+	const [value, setValue] = useState([]);
 
 	function UserIn() {
 		setIsUserIn(true);
 	}
 	setTimeout(UserIn, 3000);
 
-	const handleSubmit = (e) => {
-		console.log(e.target.value);
+	const AddTasks = (e) => {
+		console.log(value);
 	};
 
 	return (
@@ -40,11 +40,12 @@ const ManageTodo = () => {
 							variant="contained"
 							color="primary"
 							style={{ width: "10%" }}
-							onClick={handleSubmit}
+							onClick={AddTasks}
 						>
 							Add
 						</Mui.Button>
 					</form>
+					{value && <h1> {value}</h1>}
 				</div>
 			)}
 		</>
