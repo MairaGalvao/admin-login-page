@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Mui from "@material-ui/core";
-import Permission from "./Permission";
 
 const ManageTodo = () => {
 	//TODO USERS PAGE (3)
