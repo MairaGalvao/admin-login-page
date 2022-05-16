@@ -125,7 +125,6 @@ function updateUserPermission(client, email, todo, contacts, prosCons) {
 	UPDATE userPermission
 	SET todo=${todo}, contacts=${contacts}, prosCons=${prosCons}
 	WHERE email=${email}
-	
 	`;
 
 	client.query(query, (err, res) => {
